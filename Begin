@@ -1,7 +1,6 @@
-echo "# SignalProcessing" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/Prof-IlkHG/SignalProcessing.git
-git push -u origin main
+sinyal_uzunlugu=0:0.5:120;
+xt = rand(1, length(sinyal_uzunlugu));
+figure, plot(sinyal_uzunlugu,xt, 'Color','k','LineWidth',2), grid on,
+xlabel('t (Surekli Zaman Bagimsiz Degiskeni)'), ylabel('x(t), Surekli
+Zaman Sinyali'), figure, stem(xt,'fill','k'),xlabel('n (Kesikli Zaman
+Bagimsiz Degiskeni)'), ylabel('x[n], Kesikli Zaman Sinyali');

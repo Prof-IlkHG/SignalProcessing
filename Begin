@@ -13,3 +13,10 @@ jobs:
         uses: matlab-actions/run-command@v1
         with:
           command: results = runtests, assertSuccess(results);
+
+sinyal_uzunlugu=0:0.5:120;
+xt = rand(1, length(sinyal_uzunlugu));
+figure, plot(sinyal_uzunlugu,xt, 'Color','k','LineWidth',2), grid on,
+xlabel('t (Surekli Zaman Bagimsiz Degiskeni)'), ylabel('x(t), Surekli
+Zaman Sinyali'), figure, stem(xt,'fill','k'),xlabel('n (Kesikli Zaman
+Bagimsiz Degiskeni)'), ylabel('x[n], Kesikli Zaman Sinyali');
